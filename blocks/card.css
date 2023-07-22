@@ -3,7 +3,7 @@
   height: 361px;
   margin: 0;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   max-width: 100%;
 }
 
@@ -20,14 +20,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 28px; */
 }
 
 .card__title {
   font-family: "Inter", "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  color: #000;
+  color: rgb(0, 0, 0);
   font-size: 24px;
   font-weight: 900;
   text-overflow: ellipsis;
@@ -35,20 +34,13 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 581px) and (max-width: 900px) {
-  /* for 2 column layout */
-  .card:nth-child(odd) {
-    margin-left: auto;
-  }
-
-  .card:nth-child(even) {
-    margin-right: auto;
-  }
+.card__like-button {
+  min-width: 21px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 580px) {
-  /* for single column layout */
-  .card {
-    margin: 0 auto;
-  }
+.card__like-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }

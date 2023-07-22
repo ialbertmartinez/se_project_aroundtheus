@@ -37,29 +37,37 @@
   line-height: 1;
 }
 
-.profile__button_type_edit {
+.profile__edit-button {
   box-sizing: border-box;
   display: inline-block;
+  border: 1px solid rgb(255, 255, 255);
   width: 24px;
   height: 24px;
-  border: 1px solid rgb(255, 255, 255);
   margin: 0 0 0 18px;
-  padding: 7px;
-  background-image: url("../images/pencil_icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  padding: 6px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.profile__button_type_add {
+.profile__edit-button:hover {
+  opacity: 0.6000000238418579;
+  cursor: pointer;
+}
+
+.profile__add-button {
+  display: block;
+  border: 2px solid rgb(255, 255, 255);
   width: 150px;
   height: 50px;
-  box-sizing: border-box;
-  border: 2px solid rgb(255, 255, 255);
   margin: 0 0 0 auto;
-  padding: 22px 72px;
-  background-image: url("../images/plus_icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  padding: 13px 62px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.profile__add-button:hover {
+  opacity: 0.6000000238418579;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 725px) {
@@ -67,22 +75,9 @@
     margin: 0 auto 30px;
   }
 
-  .profile__info {
-    margin: auto;
-  }
-
-  .profile__user-name {
-    font-size: 22px;
-    text-align: left;
-  }
-
-  .profile__user-title {
-    font-size: 14px;
-    text-align: left;
-  }
-
-  .profile__button_type_edit {
+  .profile__edit-button {
     margin: 0 15px 0 10px;
+    padding: 3px;
     width: 18px;
     height: 18px;
   }
@@ -91,15 +86,19 @@
 @media screen and (max-width: 580px) {
   /* for single column layout */
   .profile {
-    margin: 0 auto 36px;
-    width: 90%;
-    min-width: 320px;
+    margin: 0 0 36px;
+    min-width: 282px;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
   }
 
+  .profile__info {
+    margin: 0 0 31px;
+  }
+
   .profile__user-name {
+    font-size: 22px;
     margin: 0 0 14px 43px;
     text-align: center;
   }
@@ -107,11 +106,11 @@
   .profile__user-title {
     font-size: 14px;
     text-align: center;
-    margin-bottom: 31px;
   }
 
-  .profile__button_type_add {
+  .profile__add-button {
     margin: auto;
     min-width: 282px;
+    padding: 12px 129px;
   }
 }
