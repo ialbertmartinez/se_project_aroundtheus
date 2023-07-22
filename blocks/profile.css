@@ -18,22 +18,23 @@
 .profile__user-name,
 .profile__user-title {
   font-family: "Inter", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .profile__user-name {
-  margin: 0 0 7px;
+  display: inline-block;
   font-size: 42px;
   font-weight: 500;
-  line-height: 1.14; /* 114.286% */
-  display: inline-block;
-  padding: 0;
+  line-height: 1.14; /* 48px */
+  margin-bottom: 7px;
 }
 
 .profile__user-title {
   display: block;
   font-size: 18px;
-  line-height: 1.2;
   letter-spacing: 0em;
+  line-height: 1;
 }
 
 .profile__button_type_edit {
@@ -58,4 +59,52 @@
   background-image: url("../images/plus_icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (max-width: 725px) {
+  .profile__avatar {
+    margin: 0 auto 30px;
+  }
+
+  .profile__info {
+    margin: auto;
+  }
+
+  .profile__user-name {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .profile__user-title {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  /* for single column layout */
+  .profile {
+    margin: 0 auto 36px;
+    width: 90%;
+    min-width: 320px;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile__user-name {
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .profile__user-title {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 31px;
+  }
+
+  .profile__button_type_add {
+    margin: auto;
+    min-width: 282px;
+  }
 }

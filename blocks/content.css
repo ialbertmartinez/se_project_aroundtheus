@@ -1,5 +1,27 @@
+.content {
+  box-sizing: border-box;
+  max-width: 880px;
+  margin: 0 auto 67px;
+}
+
 .content__gallery {
   display: flex;
-  flex-flow: row wrap;
+  max-width: 880px;
+  flex-wrap: wrap;
+  align-content: space-between;
   gap: 17px;
+}
+
+@media screen and (max-width: 725px) {
+  .content,
+  .content__gallery {
+    max-width: 725px;
+  }
+  .content {
+    min-width: 320px;
+  }
+
+  .content__gallery {
+    gap: 20px;
+  }
 }
