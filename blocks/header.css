@@ -24,8 +24,7 @@
 }
 
 @media screen and (max-width: 580px) {
-  .header {
-    min-width: 320px;
+  /* .header {
     max-width: 580px;
-  }
+  } */
 }

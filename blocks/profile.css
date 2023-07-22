@@ -38,6 +38,7 @@
 }
 
 .profile__button_type_edit {
+  box-sizing: border-box;
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -79,6 +80,12 @@
     font-size: 14px;
     text-align: left;
   }
+
+  .profile__button_type_edit {
+    margin: 0 15px 0 10px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -93,7 +100,7 @@
   }
 
   .profile__user-name {
-    margin-bottom: 14px;
+    margin: 0 0 14px 43px;
     text-align: center;
   }
 
