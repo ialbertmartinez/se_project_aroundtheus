@@ -13,8 +13,7 @@
 
 .content__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 2fr);
+  grid-template-columns: repeat(3, max-content);
   gap: 17px;
 }
 

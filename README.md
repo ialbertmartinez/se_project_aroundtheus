@@ -49,7 +49,63 @@
 
 ### What I learned
 
-Within a short time, I realized I can whip out several layouts using a few lines of code. Learning how to layout a design using a grid a lot more comfortably and without any fear of breaking something. It's a great feeling.
+One of the main hurdles I faced was the gallery. Originally went with flex box but challenged myself to use css grids.
+
+#### A few of the requirements:
+
+- Responsive
+- At least 2 breakpoints:
+  - Desktop: 1280px - max width
+  - Mobile: 320px - min width
+- End result was to match the design comp found in Figma (provided)
+
+#### Version 1 - Issues:
+
+- Breakpoints could be a lot smoother and less rigid
+- Too few breakpoints left the layout looking awkward at times
+
+#### Version 2 - Plan:
+
+- Convert existing flexbox gallery
+
+to a responsive css grid gallery
+
+- Introduce new breakpoints at the project's tight spots to allow the content to flow and feel smooth
+
+#### Version 2 - Highlights
+
+```css
+/* DESKTOP BREAKPOINT 1280PX - 3 col grid */
+.content__cards {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 17px;
+}
+
+/* TABLET BREAKPOINT - 2 col grid */
+@media screen and (max-width: 880px) {
+  .content__cards {
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(3, 2fr);
+    gap: 20px;
+  }
+}
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 580px) {
+  .content {
+    min-width: 282px;
+    margin: 0 19px 48px;
+  }
+
+  .content__cards {
+    grid-template-columns: repeat(1, max-content);
+    grid-template-rows: repeat(auto-fit, 2fr);
+  }
+}
+```
 
 Being able to use git and github has been a gigantic help. I had used it before but this time I got a more thorough understanding with the help of the Software Engineering Program at [TripleTen](https://tripleten.com)
 
