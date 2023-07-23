@@ -1,0 +1,1 @@
+.header{border-bottom:1px solid rgba(84,84,84,.702);margin:45px auto 40px;max-width:880px;padding:0 0 40px}.header__logo{display:block;height:33px;max-width:173px}@media screen and (max-width:880px){.header__logo{padding-left:27px}}@media screen and (max-width:725px){.header{margin:28px 0 42px;min-width:100%;padding-bottom:32px}.header__logo{height:24px;min-width:126px}}

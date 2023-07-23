@@ -1,1 +1,17 @@
 vendor/normalize.css
+
+vendor/normalize.min.css
+
+vendor/fonts.min.css
+
+blocks/page.min.css
+
+blocks/header.min.css
+
+blocks/profile.min.css
+
+blocks/content.min.css
+
+blocks/card.min.css
+
+blocks/footer.min.css
