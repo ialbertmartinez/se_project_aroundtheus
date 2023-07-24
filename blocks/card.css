@@ -30,7 +30,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .card__like-button {
+  /* heart svg width=20 height=18 */
   min-width: 21px;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;

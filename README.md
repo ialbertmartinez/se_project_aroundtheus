@@ -27,13 +27,12 @@
 ### Screenshot
 
 ![Desktop Design](./images/desktop-screenshot_1280.png)
-![Tablet Design](./images/tablet-screenshot_880.png)
 ![Mobile Design](./images/mobile-screenshot_320.png)
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/ialbertmartinez/se_project_aroundtheu)
-- Live Site URL: [https://ialbertmartinez.github.io/se_project_aroundtheus/](https://ialbertmartinez.github.io/se_project_aroundtheus/)
+- [Github Repo](https://github.com/ialbertmartinez/se_project_aroundtheu)
+- [Live Site URL:](https://ialbertmartinez.github.io/se_project_aroundtheus/)
 
 ## My Process
 
@@ -48,10 +47,6 @@
 - [TinyPNG](https://tinypng.com/)
 - [SVGOMG](https://jakearchibald.github.io/svgomg/)
 - Embedded the [Inter typeface](https://rsms.me/inter/)
-
-### What I learned
-
-One of the main hurdles I faced was the gallery. Originally went with flex box but challenged myself to use css grids.
 
 #### A few of the requirements:
 
@@ -68,9 +63,26 @@ One of the main hurdles I faced was the gallery. Originally went with flex box b
 
 #### Version 2 - Plan:
 
-- Convert existing flexbox gallery
+- Convert gallery from flexbox to grid was fairly straightforward. Change the display property from flex to grid:
+  From this:
 
-to a responsive css grid gallery
+```css
+.parent__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+```
+
+to this:
+
+```css
+.parent__container {
+  display: grid;
+  gap: 17px;
+  grid-template-columns: repeat(3, max-content);
+}
+```
 
 - Introduce new breakpoints at the project's tight spots to allow the content to flow and feel smooth
 
@@ -109,14 +121,9 @@ to a responsive css grid gallery
 }
 ```
 
-Being able to use git and github has been a gigantic help. I had used it before but this time I got a more thorough understanding with the help of the Software Engineering Program at [TripleTen](https://tripleten.com)
-
-My biggest and favorite lesson I will continue to thank them for is introducing me too BEM Methodologies. Life is far more easy to digest and understand with [BEM](https://getbem.com/). Cheesy as it sounds, it's very true.
-
 ### Useful resources
 
--[TripleTen](https://tripleten.com) the best place to optimize your knowledge (especially code)
-
+- [TripleTen](https://tripleten.com) the best place to optimize your knowledge (especially code)
 - [Figma](https://www.figma.com/) A way for design and code, your team and you can work in sweet harmony
 - [TinyPNG](https://tinypng.com/)reduce your project's load time by reducing image sizes
 - [SVGOMG](https://jakearchibald.github.io/svgomg/) Get rid of the SVG-fluff
