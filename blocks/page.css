@@ -1,11 +1,7 @@
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-.page,
-body {
+.body,
+.page {
   background-color: #000;
+  box-sizing: border-box;
 }
 .page {
   color: #fff;

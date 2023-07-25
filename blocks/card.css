@@ -1,7 +1,6 @@
 .card {
   background-color: #fff;
   border-radius: 10px;
-  height: 361px;
   margin: 0;
   max-width: 100%;
   width: 282px;
@@ -30,10 +29,14 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 .card__like-button {
-  /* heart svg width=20 height=18 */
-  min-width: 21px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  background-image: url("../images/heart_icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 20px;
+  height: 18px;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }

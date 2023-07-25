@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
-  <body>
+  <body class="body">
     <div class="page">
       <header class="header">
         <img
@@ -26,19 +26,19 @@
             class="profile__avatar"
           />
           <div class="profile__info">
-            <h1 class="profile__user-name">Jacqes Cousteau</h1>
-            <img
-              src="./images/pencil_icon.svg"
-              alt="A flat 2D style pencil"
+            <h1 class="profile__title">Jacqes Cousteau</h1>
+            <button
+              type="button"
               class="profile__edit-button"
-            />
-            <p class="profile__user-title">Explorer</p>
+              aria-label="edit"
+            ></button>
+            <p class="profile__subtitle">Explorer</p>
           </div>
-          <img
-            src="./images/plus_icon.svg"
-            alt="a 2D flat style plus sign"
+          <button
+            type="button"
             class="profile__add-button"
-          />
+            aria-label="add"
+          ></button>
         </section>
 
         <section class="content__gallery">
@@ -50,12 +50,12 @@
                 class="card__image"
               />
               <div class="card__info">
-                <p class="card__title">Yosemite Valley</p>
-                <img
-                  src="./images/heart_icon.svg"
-                  alt="outlined heart"
+                <h2 class="card__title">Yosemite Valley</h2>
+                <button
+                  type="button"
                   class="card__like-button"
-                />
+                  aria-label="like"
+                ></button>
               </div>
             </article>
 
@@ -66,12 +66,12 @@
                 class="card__image"
               />
               <div class="card__info">
-                <p class="card__title">Lake Louise</p>
-                <img
-                  src="./images/heart_icon.svg"
-                  alt="outlined heart"
+                <h2 class="card__title">Lake Louise</h2>
+                <button
+                  type="button"
                   class="card__like-button"
-                />
+                  aria-label="like"
+                ></button>
               </div>
             </article>
 
@@ -82,13 +82,12 @@
                 class="card__image"
               />
               <div class="card__info">
-                <p class="card__title">Bald Mountains</p>
-
-                <img
-                  src="./images/heart_icon.svg"
-                  alt="outlined heart"
+                <h2 class="card__title">Bald Mountains</h2>
+                <button
+                  type="button"
                   class="card__like-button"
-                />
+                  aria-label="like"
+                ></button>
               </div>
             </article>
 
@@ -99,30 +98,28 @@
                 class="card__image"
               />
               <div class="card__info">
-                <p class="card__title">Latemar</p>
-
-                <img
-                  src="./images/heart_icon.svg"
-                  alt="outlined heart"
+                <h2 class="card__title">Latemar</h2>
+                <button
+                  type="button"
                   class="card__like-button"
-                />
+                  aria-label="like"
+                ></button>
               </div>
             </article>
 
             <article class="card">
               <img
                 src="./images/vanoise.jpg"
-                alt="a peaceful still shot of the lake at Vanoise National Park"
+                alt="photo of the lake at Vanoise National Park"
                 class="card__image"
               />
               <div class="card__info">
-                <p class="card__title">Vanoise National Park</p>
-
-                <img
-                  src="./images/heart_icon.svg"
-                  alt="outlined heart"
+                <h2 class="card__title">Vanoise National Park</h2>
+                <button
+                  type="button"
                   class="card__like-button"
-                />
+                  aria-label="like"
+                ></button>
               </div>
             </article>
 
@@ -133,18 +130,18 @@
                 class="card__image"
               />
               <div class="card__info">
-                <p class="card__title">Lago di Braies</p>
-
-                <img
-                  src="./images/heart_icon.svg"
-                  alt="outlined heart"
+                <h2 class="card__title">Lago di Braies</h2>
+                <button
+                  type="button"
                   class="card__like-button"
-                />
+                  aria-label="like"
+                ></button>
               </div>
             </article>
           </div>
         </section>
       </main>
+
       <footer class="footer">
         <p class="footer__copyright">© 2023 Around The U.S.</p>
       </footer>
