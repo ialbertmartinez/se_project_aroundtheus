@@ -3,10 +3,10 @@
   max-width: 880px;
 }
 .footer__copyright {
-  color: #545454;
+  color: rgb(84, 84, 84);
   font-family: Inter, Arial, sans-serif;
   font-size: 18px;
-  line-height: normal;
+  line-height: 1.2;
   margin: 0;
 }
 @media screen and (max-width: 880px) {

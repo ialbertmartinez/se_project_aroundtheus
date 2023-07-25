@@ -1,9 +1,8 @@
 .card {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   margin: 0;
-  max-width: 100%;
-  width: 282px;
+  max-width: 282px;
 }
 .card__image {
   border-radius: 10px 10px 0 0;
@@ -19,7 +18,7 @@
   padding: 25px 20px;
 }
 .card__title {
-  color: #000;
+  color: rgb(0, 0, 0);
   font-family: Inter, Arial, sans-serif;
   font-size: 24px;
   font-weight: 900;

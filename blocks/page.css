@@ -1,10 +1,10 @@
 .body,
 .page {
-  background-color: #000;
+  background-color: rgb(0, 0, 0);
   box-sizing: border-box;
 }
 .page {
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-family: Inter, Arial, sans-serif;
   margin: 0 auto;
   max-width: 1280px;
