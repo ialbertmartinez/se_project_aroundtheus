@@ -14,12 +14,9 @@
   gap: 17px;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(auto-fit, 1fr);
-  /* grid-template-columns: repeat(3, max-content);
-  grid-template-rows: repeat(3, 1fr); */
 }
 @media screen and (max-width: 880px) {
   .content__cards {
-    gap: 20px;
     grid-template-columns: repeat(2, max-content);
     margin: 0;
     padding: 0;
@@ -31,6 +28,7 @@
     min-width: 282px;
   }
   .content__cards {
+    gap: 20px;
     grid-template-columns: repeat(1, max-content);
   }
 }
