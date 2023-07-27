@@ -3,6 +3,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 50px;
   max-width: 880px;
 }
@@ -19,16 +20,18 @@
   margin-left: 30px;
   grid-area: info;
   grid-template-areas:
-    "title title edit"
-    "subtitle subtitle subtitle";
+    "title edit"
+    "subtitle subtitle";
+  grid-template-rows: repeat(2, max-content);
   max-width: 415px;
+  row-gap: 7px;
 }
+
 .profile__title {
   box-sizing: border-box;
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 7px;
   max-width: 373px;
   font-family: Inter, Arial, sans-serif;
   font-size: 42px;
