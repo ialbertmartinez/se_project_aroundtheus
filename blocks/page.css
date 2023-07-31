@@ -21,12 +21,7 @@
 .page__content {
   grid-area: content;
 }
-@media screen and (max-width: 880px) {
-  .page__section {
-    margin: 0 20px;
-    max-width: calc(100% - 40px);
-  }
-}
+
 @media screen and (max-width: 580px) {
   .page__section {
     max-width: calc(100% - 38px);

@@ -17,7 +17,6 @@
   margin: 0;
 }
 .card__title {
-  color: #000;
   font-size: 24px;
   font-weight: 900;
   line-height: 1.2;
@@ -28,9 +27,7 @@
   margin: 0;
 }
 .card__like-button {
-  background: transparent
-    url("https://ialbertmartinez.github.io/se_project_aroundtheus/images/heart_icon.svg")
-    center no-repeat;
+  background: transparent url("../images/heart_icon.svg") center no-repeat;
   min-width: 20px;
   height: 18px;
   border: none;
