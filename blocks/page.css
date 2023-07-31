@@ -30,9 +30,6 @@
 @media screen and (max-width: 580px) {
   .page__section {
     max-width: calc(100% - 38px);
-    margin: auto;
-  }
-  .page__section {
     margin-left: 19px;
     margin-right: 19px;
   }
