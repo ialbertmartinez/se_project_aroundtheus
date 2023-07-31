@@ -8,31 +8,36 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
-  <body class="body">
-    <div class="page">
-      <header class="header">
+  <body class="page">
+    <div class="page__wrapper">
+      <header class="header page__section">
         <img
           src="./images/logo.svg"
-          alt="Bold White text reads, 'Around the U.S.'"
+          alt="Around the U.S. logo"
           class="header__logo"
         />
       </header>
-
-      <main class="content">
-        <section class="profile">
+      <main class="page__content">
+        <section class="profile page__section">
           <img
             src="./images/jacques-cousteau.jpg"
             alt="A portrait photo of Jacques-Cousteau with red beanie and the ocean in the background"
             class="profile__avatar"
           />
           <div class="profile__info">
-            <h1 class="profile__title">Jacques Cousteau</h1>
+            <h1 class="profile__title">
+              <!-- Jacques Cousteau -->
+              Jacques-Yves Cousteau
+            </h1>
             <button
               type="button"
               class="profile__edit-button"
               aria-label="edit"
             ></button>
-            <p class="profile__subtitle">Explorer</p>
+            <p class="profile__subtitle">
+              <!-- Explorer -->
+              Explorer, Adventurer, Videographer, Navigator
+            </p>
           </div>
           <button
             type="button"
@@ -40,9 +45,8 @@
             aria-label="add"
           ></button>
         </section>
-
-        <section class="content__gallery">
-          <div class="content__cards">
+        <section class="cards page__section">
+          <div class="cards__gallery">
             <article class="card">
               <img
                 src="./images/yosemite.jpg"
@@ -58,7 +62,6 @@
                 ></button>
               </div>
             </article>
-
             <article class="card">
               <img
                 src="./images/lake-louise.jpg"
@@ -74,7 +77,6 @@
                 ></button>
               </div>
             </article>
-
             <article class="card">
               <img
                 src="./images/bald-mountains.jpg"
@@ -90,7 +92,6 @@
                 ></button>
               </div>
             </article>
-
             <article class="card">
               <img
                 src="./images/latemar.jpg"
@@ -106,7 +107,6 @@
                 ></button>
               </div>
             </article>
-
             <article class="card">
               <img
                 src="./images/vanoise.jpg"
@@ -122,7 +122,6 @@
                 ></button>
               </div>
             </article>
-
             <article class="card">
               <img
                 src="./images/lago.jpg"
@@ -139,10 +138,11 @@
               </div>
             </article>
           </div>
+          <!-- end of .card__gallery -->
         </section>
+        <!-- end of .cards -->
       </main>
-
-      <footer class="footer">
+      <footer class="footer page__section">
         <p class="footer__copyright">© 2022 Around The U.S.</p>
       </footer>
     </div>

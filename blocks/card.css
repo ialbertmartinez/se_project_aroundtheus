@@ -1,43 +1,41 @@
 .card {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
+  color: #000;
   border-radius: 10px;
-  margin: 0;
-  max-width: 282px;
 }
 .card__image {
-  border-radius: 10px 10px 0 0;
+  width: 282px;
   height: 282px;
   object-fit: cover;
-  width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 .card__info {
-  align-items: center;
   display: flex;
-  justify-content: space-between;
-  margin: 0;
   padding: 25px 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
 }
 .card__title {
-  color: rgb(0, 0, 0);
-  font-family: Inter, Arial, sans-serif;
+  color: #000;
   font-size: 24px;
   font-weight: 900;
-  margin: 0;
+  line-height: 1.2;
   overflow: hidden;
-  padding: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding: 0;
+  margin: 0;
 }
 .card__like-button {
-  border: none;
-  background-color: rgb(255, 255, 255);
-  background-image: url("../images/heart_icon.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background: transparent
+    url("https://ialbertmartinez.github.io/se_project_aroundtheus/images/heart_icon.svg")
+    center no-repeat;
   min-width: 20px;
   height: 18px;
+  border: none;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-out;
 }
 .card__like-button:hover {
   cursor: pointer;
