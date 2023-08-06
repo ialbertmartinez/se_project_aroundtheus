@@ -1,0 +1,119 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 19px;
+}
+.modal__opened {
+  display: flex;
+}
+.modal__container {
+  padding: 36px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+  position: relative;
+  flex: 430px;
+  max-width: 430px;
+  max-height: 330px;
+}
+.modal__close-button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: transparent url("../images/close_icon.svg") no-repeat center
+    center;
+  background-size: contain;
+  position: absolute;
+  left: calc(100% + 5px);
+  bottom: calc(100% + 5px);
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+.modal__close-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.modal__form {
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+}
+.modal__title {
+  color: #000;
+  text-align: left;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 54px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.modal__input {
+  width: 100%;
+  max-width: 358px;
+  max-height: 27.3px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  padding: 13px 0 13px;
+}
+.modal__input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.modal__submit-button {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50px;
+  background-color: #000;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+  margin-top: 18px;
+  transition: background-color 0.3s ease-out;
+}
+.modal__submit-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 540px) {
+  .modal__container {
+    padding: 25px 22px;
+  }
+  .modal__close-button {
+    width: 26px;
+    height: 26px;
+    left: calc(100% - 32px);
+    bottom: calc(100% + 13px);
+  }
+  .modal__title {
+    font-size: 18px;
+    margin-bottom: 75px;
+  }
+  .modal__submit-button {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
