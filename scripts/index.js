@@ -31,7 +31,7 @@ const profile = pageWrapper.querySelector(".profile");
 const profileTitle = profile.querySelector(".profile__title");
 const profileSubtitle = profile.querySelector(".profile__subtitle");
 const modal = page.querySelector(".modal");
-const profileFormElement = modal.querySelector(".modal__form");
+const modalForm = modal.querySelector(".modal__form");
 const inputTitle = modal.querySelector(".modal__input_type_title");
 const inputSubtitle = modal.querySelector(".modal__input_type_subtitle");
 const editBtn = pageWrapper.querySelector(".profile__edit-button");
@@ -48,7 +48,7 @@ closeBtn.addEventListener("click", function () {
   modal.classList.remove("modal_opened");
 });
 
-profileFormElement.addEventListener("submit", handleProfileFormSubmit);
+modalForm.addEventListener("submit", handleProfileFormSubmit);
 
 // the form submission handler
 function handleProfileFormSubmit(evt) {
@@ -58,4 +58,21 @@ function handleProfileFormSubmit(evt) {
   profileSubtitle.innerText = inputSubtitle.value;
 
   modal.classList.remove("modal_opened");
+}
+
+function getCardElement(data) {
+  const cardTemplate = pageWrapper.querySelector("#card").content;
+  const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
+  const cardImage = cardElement.querySelector(".card__image");
+  const cardTitle = cardElement.querySelector(".card__title");
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  cardTitle.textContent = data.name;
+  return cardElement;
+}
+
+for (let card of initialCards) {
+  const cardsGallery = pageWrapper.querySelector(".cards__gallery");
+  const cardElement = getCardElement(card);
+  cardsGallery.prepend(cardElement);
 }
