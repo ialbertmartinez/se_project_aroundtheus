@@ -27,14 +27,30 @@ const initialCards = [
 
 const page = document.querySelector(".page");
 const pageWrapper = page.querySelector(".page__wrapper");
+const profile = pageWrapper.querySelector(".profile");
+const profileTitle = profile.querySelector(".profile__title");
+const profileSubtitle = profile.querySelector(".profile__subtitle");
 const modal = page.querySelector(".modal");
+const modalForm = modal.querySelector(".modal__form");
+const inputTitle = modal.querySelector(".modal__input_type_title");
+const inputSubtitle = modal.querySelector(".modal__input_type_subtitle");
 const editBtn = pageWrapper.querySelector(".profile__edit-button");
 const closeBtn = modal.querySelector(".modal__close-button");
 
 editBtn.addEventListener("click", function () {
   modal.classList.add("modal_opened");
+
+  inputTitle.value = profileTitle.innerText;
+  inputSubtitle.value = profileSubtitle.innerText;
 });
 
 closeBtn.addEventListener("click", function () {
+  modal.classList.remove("modal_opened");
+});
+
+modalForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  profileTitle.innerText = inputTitle.value;
+  profileSubtitle.innerText = inputSubtitle.value;
   modal.classList.remove("modal_opened");
 });
