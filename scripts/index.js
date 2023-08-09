@@ -31,7 +31,7 @@ const profile = pageWrapper.querySelector(".profile");
 const profileTitle = profile.querySelector(".profile__title");
 const profileSubtitle = profile.querySelector(".profile__subtitle");
 const modal = page.querySelector(".modal");
-const modalForm = modal.querySelector(".modal__form");
+const profileFormElement = modal.querySelector(".modal__form");
 const inputTitle = modal.querySelector(".modal__input_type_title");
 const inputSubtitle = modal.querySelector(".modal__input_type_subtitle");
 const editBtn = pageWrapper.querySelector(".profile__edit-button");
@@ -48,9 +48,14 @@ closeBtn.addEventListener("click", function () {
   modal.classList.remove("modal_opened");
 });
 
-modalForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+profileFormElement.addEventListener("submit", handleProfileFormSubmit);
+
+// the form submission handler
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+
   profileTitle.innerText = inputTitle.value;
   profileSubtitle.innerText = inputSubtitle.value;
+
   modal.classList.remove("modal_opened");
-});
+}
