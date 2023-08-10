@@ -4,7 +4,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 99;
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   display: none;
@@ -23,7 +23,7 @@
   box-sizing: border-box;
   font-family: Inter, Arial, sans-serif;
   position: relative;
-  flex: 430px;
+  width: 100%;
   max-width: 430px;
   max-height: 330px;
 }
@@ -74,12 +74,12 @@
   font-weight: 400;
   line-height: 1.21;
   padding: 13px 0 13px;
-  transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.3s ease;
 }
-.modal__input:focus,
+/* .modal__input:focus, */
 .modal__input:focus-visible {
   outline: none;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .modal__input::placeholder {
