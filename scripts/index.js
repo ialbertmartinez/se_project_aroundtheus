@@ -37,28 +37,30 @@ const inputSubtitle = modal.querySelector(".modal__input_type_subtitle");
 const editBtn = pageWrapper.querySelector(".profile__edit-button");
 const closeBtn = modal.querySelector(".modal__close-button");
 
-editBtn.addEventListener("click", function () {
+function openModalForm() {
   modal.classList.add("modal_opened");
-
+  // auto populate form fields with profile data
   inputTitle.value = profileTitle.innerText;
   inputSubtitle.value = profileSubtitle.innerText;
-});
+}
 
-closeBtn.addEventListener("click", function () {
+function closeModalForm() {
   modal.classList.remove("modal_opened");
-});
+}
 
-modalForm.addEventListener("submit", handleProfileFormSubmit);
-
-// the form submission handler
 function handleProfileFormSubmit(evt) {
+  // the form submission handler
   evt.preventDefault();
-
+  // update profile elements with input values
   profileTitle.innerText = inputTitle.value;
   profileSubtitle.innerText = inputSubtitle.value;
 
-  modal.classList.remove("modal_opened");
+  closeModalForm();
 }
+
+editBtn.addEventListener("click", openModalForm);
+closeBtn.addEventListener("click", closeModalForm);
+modalForm.addEventListener("submit", handleProfileFormSubmit);
 
 function getCardElement(data) {
   const cardTemplate = pageWrapper.querySelector("#card").content;
