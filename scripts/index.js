@@ -73,8 +73,8 @@ function getCardElement(data) {
   return cardElement;
 }
 
-for (let card of initialCards) {
+initialCards.forEach(function (card) {
   const cardsGallery = pageWrapper.querySelector(".cards__gallery");
   const cardElement = getCardElement(card);
   cardsGallery.prepend(cardElement);
-}
+});
