@@ -30,37 +30,67 @@ const pageWrapper = page.querySelector(".page__wrapper");
 const profile = pageWrapper.querySelector(".profile");
 const profileTitle = profile.querySelector(".profile__title");
 const profileSubtitle = profile.querySelector(".profile__subtitle");
-const modal = page.querySelector(".modal");
-const modalForm = modal.querySelector(".modal__form");
-const inputTitle = modal.querySelector(".modal__input_type_title");
-const inputSubtitle = modal.querySelector(".modal__input_type_subtitle");
-const editBtn = pageWrapper.querySelector(".profile__edit-button");
-const closeBtn = modal.querySelector(".modal__close-button");
 
-function openModalForm() {
+const modalEdit = page.querySelector("#modal-edit");
+const modalEditForm = modalEdit.querySelector(".modal__form");
+
+const modalAdd = page.querySelector("#modal-add");
+const modalAddForm = modalAdd.querySelector(".modal__form");
+
+const inputTitle = modalEdit.querySelector(".modal__input_type_title");
+const inputSubtitle = modalEdit.querySelector(".modal__input_type_subtitle");
+
+const inputCardTitle = modalAdd.querySelector(".modal__input_type_title");
+const inputCardUrl = modalAdd.querySelector(".modal__input_type_subtitle");
+
+const editBtn = pageWrapper.querySelector(".profile__edit-button");
+const editCloseBtn = modalEdit.querySelector(".modal__close-button");
+
+const addBtn = pageWrapper.querySelector(".profile__add-button");
+const addCloseBtn = modalAdd.querySelector(".modal__close-button");
+
+function openModalForm(modal) {
   modal.classList.add("modal_opened");
-  // auto populate form fields with profile data
+
   inputTitle.value = profileTitle.innerText;
   inputSubtitle.value = profileSubtitle.innerText;
 }
 
-function closeModalForm() {
+function closeModalForm(modal) {
   modal.classList.remove("modal_opened");
 }
 
 function handleProfileFormSubmit(evt) {
-  // the form submission handler
   evt.preventDefault();
-  // update profile elements with input values
+
   profileTitle.innerText = inputTitle.value;
   profileSubtitle.innerText = inputSubtitle.value;
-
-  closeModalForm();
+  closeModalForm(modalEdit);
 }
 
-editBtn.addEventListener("click", openModalForm);
-closeBtn.addEventListener("click", closeModalForm);
-modalForm.addEventListener("submit", handleProfileFormSubmit);
+function handleAddFormSubmit(evt) {
+  evt.preventDefault();
+
+  inputCardTitle.innerText = inputCardTitle.value;
+  inputCardUrl.innerText = inputCardUrl.value;
+  closeModalForm(modaladd);
+}
+
+editBtn.addEventListener("click", () => {
+  openModalForm(modalEdit);
+});
+editCloseBtn.addEventListener("click", () => {
+  closeModalForm(modalEdit);
+});
+modalEditForm.addEventListener("submit", handleProfileFormSubmit);
+
+addBtn.addEventListener("click", () => {
+  openModalForm(modalAdd);
+});
+addCloseBtn.addEventListener("click", () => {
+  closeModalForm(modalAdd);
+});
+modalAddForm.addEventListener("submit", handleAddFormSubmit);
 
 function getCardElement(data) {
   const cardTemplate = pageWrapper.querySelector("#card").content;

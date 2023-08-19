@@ -70,11 +70,11 @@
       </footer>
     </div>
 
-    <div class="modal">
+    <div id="modal-edit" class="modal">
       <div class="modal__container">
         <button class="modal__close-button" type="button"></button>
         <h3 class="modal__title">Edit Profile</h3>
-        <form action="#" name="modal-form" class="modal__form">
+        <form action="#" name="modal-edit-form" class="modal__form">
           <input
             type="text"
             name="title"
@@ -86,6 +86,28 @@
             name="subtitle"
             class="modal__input modal__input_type_subtitle"
             placeholder="Description"
+          />
+          <button type="submit" class="modal__submit-button">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="modal-add" class="modal">
+      <div class="modal__container">
+        <button class="modal__close-button" type="button"></button>
+        <h3 class="modal__title">New Place</h3>
+        <form action="#" name="modal-add-form" class="modal__form">
+          <input
+            type="text"
+            name="card-title"
+            class="modal__input modal__input_type_title"
+            placeholder="Title"
+          />
+          <input
+            type="url"
+            name="card-url"
+            class="modal__input modal__input_type_subtitle"
+            placeholder="Image URL"
           />
           <button type="submit" class="modal__submit-button">Save</button>
         </form>
