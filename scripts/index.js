@@ -62,7 +62,7 @@ function closeModalForm(modal) {
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
-
+  console.log(evt.target);
   profileTitle.innerText = inputTitle.value;
   profileSubtitle.innerText = inputSubtitle.value;
   closeModalForm(modalEdit);
@@ -70,29 +70,18 @@ function handleProfileFormSubmit(evt) {
 
 function handleAddFormSubmit(evt) {
   evt.preventDefault();
-
-  inputCardTitle.innerText = inputCardTitle.value;
-  inputCardUrl.innerText = inputCardUrl.value;
-  closeModalForm(modaladd);
+  const cardData = {
+    link: inputCardUrl.value,
+    name: inputCardTitle.value,
+  };
+  const cardsGallery = pageWrapper.querySelector(".cards__gallery");
+  cardsGallery.prepend(renderCard(cardData));
+  inputCardUrl.value = "";
+  inputCardTitle.value = "";
+  closeModalForm(modalAdd);
 }
 
-editBtn.addEventListener("click", () => {
-  openModalForm(modalEdit);
-});
-editCloseBtn.addEventListener("click", () => {
-  closeModalForm(modalEdit);
-});
-modalEditForm.addEventListener("submit", handleProfileFormSubmit);
-
-addBtn.addEventListener("click", () => {
-  openModalForm(modalAdd);
-});
-addCloseBtn.addEventListener("click", () => {
-  closeModalForm(modalAdd);
-});
-modalAddForm.addEventListener("submit", handleAddFormSubmit);
-
-function getCardElement(data) {
+function renderCard(data) {
   const cardTemplate = pageWrapper.querySelector("#card").content;
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
@@ -103,8 +92,22 @@ function getCardElement(data) {
   return cardElement;
 }
 
+editBtn.addEventListener("click", () => {
+  openModalForm(modalEdit);
+});
+editCloseBtn.addEventListener("click", () => closeModalForm(modalEdit));
+modalEditForm.addEventListener("submit", handleProfileFormSubmit);
+
+addBtn.addEventListener("click", () => {
+  openModalForm(modalAdd);
+});
+addCloseBtn.addEventListener("click", () => {
+  closeModalForm(modalAdd);
+});
+modalAddForm.addEventListener("submit", handleAddFormSubmit);
+
 initialCards.forEach(function (card) {
   const cardsGallery = pageWrapper.querySelector(".cards__gallery");
-  const cardElement = getCardElement(card);
+  const cardElement = renderCard(card);
   cardsGallery.prepend(cardElement);
 });
