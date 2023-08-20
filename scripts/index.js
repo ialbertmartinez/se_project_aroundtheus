@@ -28,6 +28,7 @@ const initialCards = [
 
 const page = document.querySelector(".page");
 const pageWrapper = page.querySelector(".page__wrapper");
+
 const profile = pageWrapper.querySelector(".profile");
 const profileTitle = profile.querySelector(".profile__title");
 const profileSubtitle = profile.querySelector(".profile__subtitle");
@@ -51,6 +52,9 @@ const inputCardUrl = modalAdd.querySelector(".modal__input_type_subtitle");
 
 const addBtn = pageWrapper.querySelector(".profile__add-button");
 const addCloseBtn = modalAdd.querySelector(".modal__close-button");
+
+const cards = pageWrapper.querySelector(".cards");
+const likeBtn = cards.querySelectorAll(".card__like-button");
 
 function openModalForm(modal) {
   modal.classList.add("modal_opened");
@@ -90,21 +94,23 @@ function renderCard(data) {
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
+  cardElement.addEventListener("click", isLiked);
   return cardElement;
 }
 
-editBtn.addEventListener("click", () => {
-  openModalForm(modalEdit);
-});
+function isLiked(e) {
+  let btn = e.target;
+  if (btn.classList.contains("card__like-button")) {
+    btn.classList.toggle("liked");
+  }
+}
+
+editBtn.addEventListener("click", () => openModalForm(modalEdit));
 editCloseBtn.addEventListener("click", () => closeModalForm(modalEdit));
 modalEditForm.addEventListener("submit", handleProfileFormSubmit);
 
-addBtn.addEventListener("click", () => {
-  openModalForm(modalAdd);
-});
-addCloseBtn.addEventListener("click", () => {
-  closeModalForm(modalAdd);
-});
+addBtn.addEventListener("click", () => openModalForm(modalAdd));
+addCloseBtn.addEventListener("click", () => closeModalForm(modalAdd));
 modalAddForm.addEventListener("submit", handleAddFormSubmit);
 
 initialCards.forEach(function (card) {

@@ -32,9 +32,13 @@
   height: 18px;
   border: none;
   opacity: 1;
-  transition: opacity 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .card__like-button:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+
+.card__like-button.liked {
+  background: transparent url("../images/heart_liked_icon.svg") center no-repeat;
 }
