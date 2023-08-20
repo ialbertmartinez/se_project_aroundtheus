@@ -77,7 +77,6 @@ function handleAddFormSubmit(evt) {
   };
   const cardsGallery = pageWrapper.querySelector(".cards__gallery");
   cardsGallery.prepend(renderCard(cardData));
-
   inputCardUrl.value = "";
   inputCardTitle.value = "";
   closeModalForm(modalAdd);
