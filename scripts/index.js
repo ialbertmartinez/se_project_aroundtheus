@@ -1,3 +1,4 @@
+// card data
 const initialCards = [
   {
     name: "New York",
@@ -31,27 +32,28 @@ const profile = pageWrapper.querySelector(".profile");
 const profileTitle = profile.querySelector(".profile__title");
 const profileSubtitle = profile.querySelector(".profile__subtitle");
 
+// edit form variables
 const modalEdit = page.querySelector("#modal-edit");
 const modalEditForm = modalEdit.querySelector(".modal__form");
-
-const modalAdd = page.querySelector("#modal-add");
-const modalAddForm = modalAdd.querySelector(".modal__form");
 
 const inputTitle = modalEdit.querySelector(".modal__input_type_title");
 const inputSubtitle = modalEdit.querySelector(".modal__input_type_subtitle");
 
-const inputCardTitle = modalAdd.querySelector(".modal__input_type_title");
-const inputCardUrl = modalAdd.querySelector(".modal__input_type_subtitle");
-
 const editBtn = pageWrapper.querySelector(".profile__edit-button");
 const editCloseBtn = modalEdit.querySelector(".modal__close-button");
+
+// add form variables
+const modalAdd = page.querySelector("#modal-add");
+const modalAddForm = modalAdd.querySelector(".modal__form");
+
+const inputCardTitle = modalAdd.querySelector(".modal__input_type_title");
+const inputCardUrl = modalAdd.querySelector(".modal__input_type_subtitle");
 
 const addBtn = pageWrapper.querySelector(".profile__add-button");
 const addCloseBtn = modalAdd.querySelector(".modal__close-button");
 
 function openModalForm(modal) {
   modal.classList.add("modal_opened");
-
   inputTitle.value = profileTitle.innerText;
   inputSubtitle.value = profileSubtitle.innerText;
 }
@@ -62,7 +64,6 @@ function closeModalForm(modal) {
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
-  console.log(evt.target);
   profileTitle.innerText = inputTitle.value;
   profileSubtitle.innerText = inputSubtitle.value;
   closeModalForm(modalEdit);
@@ -76,6 +77,7 @@ function handleAddFormSubmit(evt) {
   };
   const cardsGallery = pageWrapper.querySelector(".cards__gallery");
   cardsGallery.prepend(renderCard(cardData));
+
   inputCardUrl.value = "";
   inputCardTitle.value = "";
   closeModalForm(modalAdd);
