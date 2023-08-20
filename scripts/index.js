@@ -55,6 +55,12 @@ const addCloseBtn = modalAdd.querySelector(".modal__close-button");
 
 const cards = pageWrapper.querySelector(".cards");
 const likeBtn = cards.querySelectorAll(".card__like-button");
+// when clicking on a card image
+// a modal window with the image @ full width and height will be shown
+// the image width should not exceed 75vw
+// the image height should not exceed 75vh
+// vertical padding or margin (both top and botton) should be 90px each
+// image should be centered horizontally and vertically
 
 function openModalForm(modal) {
   modal.classList.add("modal_opened");
@@ -86,28 +92,39 @@ function handleAddFormSubmit(evt) {
   closeModalForm(modalAdd);
 }
 
+function likeIt(e) {
+  const classes = e.target.classList;
+  if (classes.contains("card__like-button") && classes.contains("liked")) {
+    classes.remove("liked");
+  } else if (
+    classes.contains("card__like-button") &&
+    !classes.contains("liked")
+  ) {
+    classes.add("liked");
+  }
+}
+
+function deleteIt(e) {
+  e.target.closest(".card").remove();
+}
+
 function renderCard(data) {
   const cardTemplate = pageWrapper.querySelector("#card").content;
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
+  const deleteBtn = cardElement.querySelector(".card__delete-button");
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
-  cardElement.addEventListener("click", isLiked);
+  cardElement.addEventListener("click", likeIt);
+  deleteBtn.addEventListener("click", deleteIt);
   return cardElement;
-}
-
-function isLiked(e) {
-  let btn = e.target;
-  if (btn.classList.contains("card__like-button")) {
-    btn.classList.toggle("liked");
-  }
 }
 
 editBtn.addEventListener("click", () => openModalForm(modalEdit));
 editCloseBtn.addEventListener("click", () => closeModalForm(modalEdit));
-modalEditForm.addEventListener("submit", handleProfileFormSubmit);
+modalEditForm.addEventListener("submit", () => handleProfileFormSubmit(event));
 
 addBtn.addEventListener("click", () => openModalForm(modalAdd));
 addCloseBtn.addEventListener("click", () => closeModalForm(modalAdd));

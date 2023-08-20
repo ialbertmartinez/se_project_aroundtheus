@@ -2,6 +2,7 @@
   background-color: #fff;
   color: #000;
   border-radius: 10px;
+  position: relative;
 }
 .card__image {
   width: 282px;
@@ -39,6 +40,26 @@
   opacity: 0.5;
 }
 
-.card__like-button.liked {
+.card__like-button.liked,
+.card__like-button:active {
   background: transparent url("../images/heart_liked_icon.svg") center no-repeat;
+}
+
+.card__delete-button {
+  background: transparent url("../images/trash.svg") center no-repeat;
+  min-width: 19px;
+  height: 18px;
+  border: none;
+  opacity: 1;
+  transition: all 0.3s ease-out;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+
+.card__delete-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
