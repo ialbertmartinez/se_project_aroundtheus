@@ -79,7 +79,12 @@
       <div class="modal__container">
         <button class="modal__close-button" type="button"></button>
         <h3 class="modal__title">Edit Profile</h3>
-        <form action="#" name="modal-edit-form" class="modal__form">
+        <form
+          action="#"
+          id="modal-edit-form"
+          name="modal-edit-form"
+          class="modal__form"
+        >
           <input
             type="text"
             name="title"
@@ -116,6 +121,14 @@
           />
           <button type="submit" class="modal__submit-button">Save</button>
         </form>
+      </div>
+    </div>
+
+    <div id="modal-image" class="modal">
+      <div class="modal__container modal__container_type_image">
+        <button class="modal__close-button" type="button"></button>
+        <img class="modal__image" src="" alt="" />
+        <p class="modal__caption"></p>
       </div>
     </div>
 
