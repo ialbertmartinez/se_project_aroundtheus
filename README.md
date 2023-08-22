@@ -31,7 +31,7 @@
 
 ### Links
 
-- [Github Repo](https://github.com/ialbertmartinez/se_project_aroundtheu)
+- [Github Repo](https://github.com/ialbertmartinez/se_project_aroundtheus/)
 - [Live Site URL:](https://ialbertmartinez.github.io/se_project_aroundtheus/)
 
 ## My Process
@@ -48,78 +48,49 @@
 - [SVGOMG](https://jakearchibald.github.io/svgomg/)
 - Embedded the [Inter typeface](https://rsms.me/inter/)
 
-#### A few of the requirements:
+### Requirements:
 
 - Responsive
+- Semantic markup
+- Use B.E.M. flat file structure
 - At least 2 breakpoints:
   - Desktop: 1280px - max width
   - Mobile: 320px - min width
-- End result was to match the design comp found in Figma (provided)
+- End result was to match the Figma design comp
+- Impliment a 3 col CSS Grid to display the card gallery
+- Render the card gallery dynamically using HTML Templates
+- add 'like' and 'delete' actions for cards
+- add buttons to open/close modals
+- add CSS animations to display smooth transitions for modal transitions
+- using forms to create cards/update profile
+- Responsive with smooth transitions between all breakpoints (no scrollbars at any viewport size)
+- 0 errors logged to the console
 
-#### Version 1 - Issues:
+### Descriotion
 
-- Breakpoints could be a lot smoother and less rigid
-- Too few breakpoints left the layout looking awkward at times
+This project is a seemingly simple profile page that allows a user to display items as a gallery of custom cards. The user is able to create, update. and delete items in their card gallery as well as update their profile info.
 
-#### Version 2 - Plan:
+#### Add Custom Cards
 
-- Convert gallery from flexbox to grid was fairly straightforward. Change the display property from flex to grid:
-  From this:
+In order to add new custom cards to the card gallery, simply tap/click the 'add button' to the far right of the user's name--indicated by the big '+' symbol. For users with screen readers, you will be able to find it using or hearing the aria-label: "add". Newest cards will be placed at the beginning of the gallery.
 
-```css
-.parent__container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-```
+#### Update
 
-to this:
+Tap/cick the pencil icon next to the user's name tp edit their name and/or title.
 
-```css
-.parent__container {
-  display: grid;
-  gap: 17px;
-  grid-template-columns: repeat(3, max-content);
-}
-```
+#### Delete
 
-- Introduce new breakpoints at the project's tight spots to allow the content to flow and feel smooth
+Tap/click on the trashcan icon in the upper-right corder of any card to remove it from the gallery. No confirmation will be given. In a future update, I plan to add this feature in the form of an alert to ensure that is the action you want to take.
 
-#### Version 2 - Highlights
+#### Like
 
-```css
-/* DESKTOP BREAKPOINT 1280PX - 3 col grid */
-.content__cards {
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  gap: 17px;
-}
+Tap/click on the heart next to the item's name to 'like' it. In a future update, I plan to make this feature that will stay after you leave the page and come back to it. Currently a WIP.
 
-/* TABLET BREAKPOINT - 2 col grid */
-@media screen and (max-width: 880px) {
-  .content__cards {
-    margin: 0;
-    padding: 0;
-    grid-template-columns: repeat(2, max-content);
-    grid-template-rows: repeat(3, 2fr);
-    gap: 20px;
-  }
-}
+I will add more as more comes in. I hope you enjoy the project as much as I did building it.
 
-/* MOBILE BREAKPOINT */
-@media screen and (max-width: 580px) {
-  .content {
-    min-width: 282px;
-    margin: 0 19px 48px;
-  }
+Happy coding everyone,
 
-  .content__cards {
-    grid-template-columns: repeat(1, max-content);
-    grid-template-rows: repeat(auto-fit, 2fr);
-  }
-}
-```
+- A
 
 ### Useful resources
 
