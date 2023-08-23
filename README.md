@@ -8,6 +8,7 @@
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Description](#description)
   - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -39,7 +40,9 @@
 ### Built with
 
 - Semantic HTML5 markup
+- HTML Templates
 - CSS Responsive Grid
+- JS: Objects, functions, Arrow functions
 - Flexbox
 - Media Queries
 - Figma Design Brief
