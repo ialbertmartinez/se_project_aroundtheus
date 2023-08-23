@@ -48,7 +48,7 @@ const addCloseBtn = modalAdd.querySelector(".modal__close-button");
 const likeBtn = cards.querySelectorAll(".card__like-button");
 const modalImage = modalImg.querySelector(".modal__image");
 const modalCaption = modalImg.querySelector(".modal__caption");
-const modalCloseBtn = modalImg.querySelector(".modal__close-button");
+const modalImageCloseBtn = modalImg.querySelector(".modal__close-button");
 
 // form & form data
 const modalEditForm = modalEdit.querySelector(".modal__form");
@@ -68,8 +68,8 @@ function closeModal(modal) {
 
 function handleProfileFormSubmit(e) {
   e.preventDefault();
-  profileTitle.innerText = inputTitle.value;
-  profileSubtitle.innerText = inputSubtitle.value;
+  profileTitle.textContent = inputTitle.value;
+  profileSubtitle.textContent = inputSubtitle.value;
   closeModal(modalEdit);
 }
 
@@ -86,7 +86,7 @@ function handleAddFormSubmit(e) {
 }
 
 function likeCard(e) {
-  e.target.classList.toggle("liked");
+  e.target.classList.toggle("card__like-button_liked");
 }
 
 function deleteCard(e) {
@@ -98,11 +98,12 @@ function renderCard(data) {
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
   const deleteBtn = cardElement.querySelector(".card__delete-button");
+  const likeBtn = cardElement.querySelector(".card__like-button");
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
 
-  cardElement.addEventListener("click", likeCard);
+  likeBtn.addEventListener("click", likeCard);
   deleteBtn.addEventListener("click", deleteCard);
 
   // img modal
@@ -127,7 +128,7 @@ modalEditForm.addEventListener("submit", handleProfileFormSubmit);
 addBtn.addEventListener("click", () => openModal(modalAdd));
 addCloseBtn.addEventListener("click", () => closeModal(modalAdd));
 modalAddForm.addEventListener("submit", handleAddFormSubmit);
-modalCloseBtn.addEventListener("click", function () {
+modalImageCloseBtn.addEventListener("click", function () {
   closeModal(modalImg);
 });
 
