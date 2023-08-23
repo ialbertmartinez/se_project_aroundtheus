@@ -9,6 +9,7 @@
   height: 282px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }
 .card__info {
   display: flex;
@@ -33,10 +34,10 @@
   height: 18px;
   border: none;
   opacity: 1;
+  cursor: pointer;
   transition: all 0.3s ease-out;
 }
 .card__like-button:hover {
-  cursor: pointer;
   opacity: 0.5;
 }
 
@@ -54,10 +55,10 @@
   top: 18px;
   right: 15px;
   opacity: 1;
+  cursor: pointer;
   transition: all 0.3s ease-out;
 }
 
 .card__delete-button:hover {
-  cursor: pointer;
   opacity: 0.6;
 }
