@@ -75,34 +75,47 @@
       </footer>
     </div>
 
-    <div id="modal-edit" class="modal">
-      <div class="modal__container">
-        <button class="modal__close-button" type="button"></button>
-        <h3 class="modal__title">Edit Profile</h3>
+    <div id="popup-edit" class="popup">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button"></button>
+        <h3 class="popup__title">Edit Profile</h3>
         <form
           action="#"
-          id="modal-edit-form"
-          name="modal-edit-form"
-          class="modal__form"
+          id="popup-edit-form"
+          name="popup-edit-form"
+          class="popup__form"
+          novalidate
         >
-          <input
-            type="text"
-            name="title"
-            class="modal__input modal__input_type_title"
-            placeholder="Name"
-            required
-          />
-          <input
-            type="text"
-            name="subtitle"
-            class="modal__input modal__input_type_subtitle"
-            placeholder="Description"
-            required
-          />
+          <label class="popup__label">
+            <input
+              type="text"
+              id="profile-name"
+              name="profile-name"
+              class="popup__input popup__input_type_title"
+              placeholder="Name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span id="profile-name-error" class="popup__error"></span>
+          </label>
+          <label class="popup__label">
+            <input
+              type="text"
+              id="profile-description"
+              name="subtitle"
+              class="popup__input popup__input_type_subtitle"
+              placeholder="Description"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span id="profile-description-error" class="popup__error"></span>
+          </label>
           <button
             type="submit"
-            class="modal__submit-button"
-            aria-label="save-changes"
+            class="popup__button popup__button_type_submit"
+            aria-label="save-profile-changes"
           >
             Save
           </button>
@@ -110,29 +123,41 @@
       </div>
     </div>
 
-    <div id="modal-add" class="modal">
-      <div class="modal__container">
-        <button class="modal__close-button" type="button"></button>
-        <h3 class="modal__title">New Place</h3>
-        <form action="#" name="modal-add-form" class="modal__form">
-          <input
-            type="text"
-            name="card-title"
-            class="modal__input modal__input_type_title"
-            placeholder="Title"
-            required
-          />
-          <input
-            type="url"
-            name="card-url"
-            class="modal__input modal__input_type_subtitle"
-            placeholder="Image URL"
-            required
-          />
+    <div id="popup-add" class="popup">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button"></button>
+        <h3 class="popup__title">New Place</h3>
+        <form action="#" name="popup-add-form" class="popup__form" novalidate>
+          <label class="popup__label">
+            <input
+              type="text"
+              id="card-title"
+              name="card-title"
+              class="popup__input popup__input_type_title"
+              placeholder="Title"
+              minlength="1"
+              maxlength="30"
+              required
+            />
+            <span id="card-title-error" class="popup__error"></span>
+          </label>
+
+          <label class="popup__label">
+            <input
+              type="url"
+              id="card-url"
+              name="card-url"
+              class="popup__input popup__input_type_subtitle"
+              placeholder="Image URL"
+              required
+            />
+            <span id="card-url-error" class="popup__error"></span>
+          </label>
           <button
             type="submit"
-            class="modal__submit-button"
+            class="popup__button popup__button_type_submit popup__button_disabled"
             aria-label="Save-card"
+            disabled
           >
             Save
           </button>
@@ -140,14 +165,15 @@
       </div>
     </div>
 
-    <div id="modal-image" class="modal">
-      <div class="modal__container modal__container_type_image">
-        <button class="modal__close-button" type="button"></button>
-        <img class="modal__image" src="#" alt=" " />
-        <p class="modal__caption"></p>
+    <div id="popup-image" class="popup">
+      <div class="popup__container popup__container_type_image">
+        <button class="popup__close-button" type="button"></button>
+        <img class="popup__image" src="#" alt=" " />
+        <p class="popup__caption"></p>
       </div>
     </div>
 
-    <script src="./scripts/index.js" defer></script>
+    <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/validation.js"></script>
   </body>
 </html>
