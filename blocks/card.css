@@ -41,7 +41,7 @@
   opacity: 0.5;
 }
 
-.card__like-button.liked,
+.card__like-button_liked,
 .card__like-button:active {
   background: transparent url("../images/heart_liked_icon.svg") center no-repeat;
 }

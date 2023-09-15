@@ -8,6 +8,7 @@
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Description](#description)
   - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -39,7 +40,11 @@
 ### Built with
 
 - Semantic HTML5 markup
+- HTML Templates
 - CSS Responsive Grid
+- JS: Objects, functions, Arrow functions
+- Custom JS client-side form validation
+- Image Gallery with Slideshow
 - Flexbox
 - Media Queries
 - Figma Design Brief
@@ -66,25 +71,27 @@
 - Responsive with smooth transitions between all breakpoints (no scrollbars at any viewport size)
 - 0 errors logged to the console
 
-### Descriotion
+### Description:
 
-This project is a seemingly simple profile page that allows a user to display items as a gallery of custom cards. The user is able to create, update. and delete items in their card gallery as well as update their profile info.
+This project is a clean profile type website page with a minimalist style to let the content have the floor. The css grid gallery allows the images to display all at once in thumbnail form or in full screen view upon tapping or selecting an image. The user is able to create, update. and delete items in their card gallery as well as update their profile info. Both of the forms have custom JS form validation [validation.js](./scripts/validation.js) and css animations for a clean and polished look &amp; feel.
 
-#### Add Custom Cards
+#### Update Profile &amp; Gallery
 
-In order to add new custom cards to the card gallery, simply tap/click the 'add button' to the far right of the user's name--indicated by the big '+' symbol. For users with screen readers, you will be able to find it using or hearing the aria-label: "add". Newest cards will be placed at the beginning of the gallery.
+##### Update Profile
 
-#### Update
+Tap/click the pencil icon next to the user's name. Change the data to match your own then hit 'save'.
 
-Tap/cick the pencil icon next to the user's name tp edit their name and/or title.
+##### Add Custom Cards
+
+To add a custom card you will need the name for the card and an image URL: 'https://example.com/path/to/Image.png'. Simply tap/click the [ + ] button to the far right of the user's name.
 
 #### Delete
 
-Tap/click on the trashcan icon in the upper-right corder of any card to remove it from the gallery. No confirmation will be given. In a future update, I plan to add this feature in the form of an alert to ensure that is the action you want to take.
+Tap/click on the trashcan icon in the upper-right corner of any card to remove it. In a future update, I plan to enhance the UX and UI by asking the user if they are sure they want to delete the card.
 
 #### Like
 
-Tap/click on the heart next to the item's name to 'like' it. In a future update, I plan to make this feature that will stay after you leave the page and come back to it. Currently a WIP.
+Tap/click on the heart next to the item's name to 'like' it. Like is seen with the heart filled in with black.
 
 I will add more as more comes in. I hope you enjoy the project as much as I did building it.
 
