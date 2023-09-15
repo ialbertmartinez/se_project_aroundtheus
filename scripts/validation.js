@@ -15,10 +15,9 @@ const showInputError = (formEl, inputEl, { inputErrorClass, errorClass }) => {
 
 const checkInputValidity = (formEl, inputEl, options) => {
   if (!inputEl.validity.valid) {
-    showInputError(formEl, inputEl, options);
-  } else {
-    hideInputError(formEl, inputEl, options);
+    return showInputError(formEl, inputEl, options);
   }
+  hideInputError(formEl, inputEl, options);
 };
 
 const hasInvalidInput = (inputEls) => {
