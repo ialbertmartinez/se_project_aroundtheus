@@ -26,22 +26,6 @@ const initialCards = [
   },
 ];
 
-// main sections
-
-// helper functions
-
-// open popups
-
-// close popups
-
-// edit profile form UI
-
-// card gallery & slideshow UI
-
-// add card form UI
-
-// card UI
-
 // wrappers & main sections
 const page = document.querySelector(".page");
 const profile = page.querySelector(".profile");
@@ -95,13 +79,9 @@ function openPopup(popup) {
 }
 
 function closePopup(popup) {
-  if (popup.classList.contains("popup")) {
-    const submitBtn = popup.querySelector(".popup__button");
-    popup.classList.remove("popup_opened");
-    disableButton(submitBtn, config);
-    popup.removeEventListener("mousedown", handleOverlayClick);
-    document.removeEventListener("keydown", closeWithEsc);
-  }
+  popup.classList.remove("popup_opened");
+  popup.removeEventListener("mousedown", handleOverlayClick);
+  document.removeEventListener("keydown", closeWithEsc);
 }
 
 function handleOverlayClick(e) {
@@ -122,6 +102,7 @@ function handleAddFormSubmit(e) {
   e.preventDefault();
   const popup = page.querySelector(".popup_opened");
   const formEl = popup.querySelector(".popup__form");
+  const submitBtn = popup.querySelector(".popup__button");
   const cardData = {
     link: inputCardUrl.value,
     name: inputCardTitle.value,
@@ -129,6 +110,7 @@ function handleAddFormSubmit(e) {
 
   cardsGallery.prepend(renderCard(cardData));
   closePopup(popup);
+  disableButton(submitBtn, config);
   formEl.reset();
 }
 
